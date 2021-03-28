@@ -1,0 +1,4 @@
+更改 .env 文件的  数据库  db_name, username 和password;
+将public文件夹里的  .htaccess 文件放至与项目平级的目录
+即：  missmultiple
+         .htaccess

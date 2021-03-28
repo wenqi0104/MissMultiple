@@ -88,7 +88,7 @@ class UsersController extends Controller
             //文件名+扩展名
             $fileToStore = $filename . '_' . time() . '.' . $extension;
             //上传文件
-            $path = $request->file('avatar')->storeAs('public/img', $fileToStore);
+            $path = $request->file('avatar')->move('storage/img', $fileToStore);
         } else {
             $fileToStore = 'noavatar.png';
         }
@@ -188,7 +188,7 @@ class UsersController extends Controller
             //文件名+扩展名
             $fileToStore = $filename.'_'.time().'.'.$extension;
             //上传文件
-            $path = $request->file('avatar')->storeAs('public/img',$fileToStore);
+            $path = $request->file('avatar')->move('storage/img',$fileToStore);
 
 
         }else{

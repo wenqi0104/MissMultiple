@@ -70,7 +70,7 @@ class ExamsController extends Controller
             //文件名+扩展名
             $fileToStore = $filename.'_'.time().'.'.$extension;
             //上传文件
-            $path = $request->file('exams_file')->storeAs('public/exams_file',$fileToStore);
+            $path = $request->file('exams_file')->move('storage/exams_file',$fileToStore);
         }
 
         $exam = new Exam();
@@ -155,7 +155,7 @@ class ExamsController extends Controller
             //文件名+扩展名
             $fileToStore = $filename . '_' . time() . '.' . $extension;
             //上传文件
-            $path = $request->file('exams_file')->storeAs('public/exams_file', $fileToStore);
+            $path = $request->file('exams_file')->move('storage/exams_file', $fileToStore);
         }
 
         $exam = Exam::find($id);

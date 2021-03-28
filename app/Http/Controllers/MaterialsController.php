@@ -80,7 +80,7 @@ class MaterialsController extends Controller
             //文件名+扩展名
             $fileToStore = $filename.'_'.time().'.'.$extension;
             //上传文件
-            $path = $request->file('uploads')->storeAs('public/uploads',$fileToStore);
+            $path = $request->file('uploads')->move('storage/uploads/',$fileToStore);
         }else{
             $fileToStore = "no video";
         }
@@ -175,7 +175,7 @@ class MaterialsController extends Controller
             //文件名+扩展名
             $fileToStore = $filename.'_'.time().'.'.$extension;
             //上传文件 
-            $path = $request->file('uploads')->storeAs('public/uploads',$fileToStore);
+            $path = $request->file('uploads')->move('storage/uploads',$fileToStore);
         }
 
 

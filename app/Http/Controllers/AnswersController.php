@@ -265,7 +265,7 @@ class AnswersController extends Controller
             //文件名+扩展名
             $fileToStore = $filename .'.'. $extension;
             //上传文件
-            $path = $request->file('answers_file')->storeAs('public/answers_file', $fileToStore);
+            $path = $request->file('answers_file')->move('store/answers_file', $fileToStore);
         }
 
 
